@@ -15,8 +15,8 @@ class Hero:
         return self.health > 0
 
 class Game:
-    def __init__(self):
-        self.player = Hero(name="Игрок")
+    def __init__(self, hero_name):
+        self.player = Hero(name=hero_name)
         self.computer = Hero(name="Компьютер")
 
     def start(self):
@@ -47,6 +47,5 @@ class Game:
         else:
             print("Вы проиграли!")
 
-if __name__ == "__main__":
-    game = Game()
-    game.start()
+game = Game(input("Введите имя Вашего Героя: "))
+game.start()
